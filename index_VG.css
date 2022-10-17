@@ -1,0 +1,273 @@
+@font-face {
+    font-family: bungee-shade;
+    src: url(BungeeShade-Regular.ttf);
+}
+
+@font-face {
+    font-family: bungee-regular;
+    src: url(BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+    font-family: barlow;
+    src: url(BarlowCondensed-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: barlowbold;
+    src: url(BarlowCondensed-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: barlow;
+    color: white;
+}
+
+.master {
+    padding: 0 5vw;
+}
+
+.container {
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+header h1 {
+    font-family: bungee-shade;
+    font-size: 70px;
+    margin-bottom: 60px;
+}
+
+nav {
+    display: flex;  
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.click {
+    font-size: 20px;
+    flex-grow: 1;
+    background-color: rgba(240, 248, 255, 0.5); 
+    width: 400px;  
+    height: 50px;   
+    margin: 2px;
+    border-radius: 10px;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.click:nth-of-type(2) {
+    font-family: barlowbold;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+
+.click:nth-of-type(1):active {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.click:nth-of-type(3):active {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.click:nth-of-type(4):active {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid lightgrey;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#are_you_experienced {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.album_data {
+    grid-column: 1 / 4;
+    margin-right: 20px;
+}
+
+.album_data p {
+    margin-top: 50px;
+}
+
+.album_data h1 {
+    font-family: bungee-regular;
+    font-size: 30px;
+}
+
+.near {
+    margin: 0;
+    font-size: 23px;
+    font-family: barlowbold;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.bungee {
+    font-family: bungee-regular;
+    font-size: 30px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cover {
+    grid-column: 4 / 7;
+    height: 40vw;
+    position: relative;
+}
+
+.show_hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+.show_not_hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.show_not_hover:hover {
+    opacity: 1;
+}
+
+.song_list {
+    grid-column: 4 / 7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.song_list div {
+    background-color: #fe795a;
+    padding: 20px;
+    list-style-position: inside;
+    color: #fcced0;
+}
+
+.song_list>div:nth-of-type(1) {
+    border-radius: 0 0 0 25px;
+}
+
+.song_list>div:nth-of-type(2) {
+    border-radius: 0 0 25px 0px;
+}
+
+.song_list ul {
+    list-style: conic-gradient;
+    margin-left: -20px;
+}
+
+.song_list h2 {
+    margin-left: 5px;
+}
+
+.anecdotes {
+    grid-column: 1 / span 6;
+    grid-row: 3 / 4;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 0px;
+    margin-top: 10px;
+}
+
+.anecdotes li {
+    background-color: #fcced0;
+    font-weight: bold;
+    height: 25vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.anecdotes li:nth-of-type(1) {
+    border-radius: 25px 0 25px 25px;
+    color: #fe795a;
+}
+
+.anecdotes li:nth-of-type(3) {
+    border-radius: 25px 25px 25px 0px;
+    color: #fe795a;
+}
+
+.top_left_90 {
+    border-radius: 0 25px 25px 25px;
+    padding-top: 20px;
+}
+
+.image_1 {
+    background-image: url(images/concert);
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom_right_90 {
+    border-radius: 25px 25px 0 25px;
+    color: #fe795a;
+}
+
+.top_right_90 {
+    grid-column: 1 / 2;
+    color: #fe795a;
+}
+
+.empty {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    opacity: 0;
+}
+
+.two_wide {
+    grid-column: 3 / 5;
+    grid-row: 1;
+    
+}
+
+
