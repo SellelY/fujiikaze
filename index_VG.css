@@ -30,6 +30,7 @@ body {
     background-size: cover;
     font-family: barlow;
     color: white;
+    font-size: 1.5vw;
 }
 
 .master {
@@ -40,12 +41,12 @@ body {
     margin: 100px auto;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 
 header h1 {
     font-family: bungee-shade;
-    font-size: 70px;
+    font-size: 5vw;
     margin-bottom: 60px;
 }
 
@@ -109,7 +110,15 @@ article {
     color: rgba(255, 255, 255, 0.8);
 }
 
-#are_you_experienced {
+article h1 {
+    font-size: 3vw;
+}
+
+article h2 {
+    font-size: 2.4vw;
+}
+
+.best {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
@@ -184,7 +193,7 @@ ul {
 
 .song_list div {
     background-color: #fe795a;
-    padding: 20px;
+    padding: 1vw 2vw;
     list-style-position: inside;
     color: #fcced0;
 }
@@ -222,40 +231,46 @@ ul {
     height: 25vw;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
 }
 
 .anecdotes li:nth-of-type(1) {
     border-radius: 25px 0 25px 25px;
     color: #fe795a;
+    align-items: center;
 }
 
 .anecdotes li:nth-of-type(3) {
     border-radius: 25px 25px 25px 0px;
     color: #fe795a;
+    align-items: center;
 }
 
-.top_left_90 {
-    border-radius: 0 25px 25px 25px;
-    padding-top: 20px;
-}
-
-.image_1 {
-    background-image: url(images/concert);
-    background-size: cover;
-    background-position: center;
+.anecdotes li .image {
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
 .bottom_right_90 {
     border-radius: 25px 25px 0 25px;
     color: #fe795a;
+    align-items: center;
 }
 
 .top_right_90 {
     grid-column: 1 / 2;
     color: #fe795a;
+    align-items: center;
+}
+
+.image_1 {
+    border-radius: 0 25px 25px 25px;
+    background-image: url(images/concert);
+    background-size: cover;
+    background-position: center;
+
+    align-items: end;
 }
 
 .empty {
@@ -267,7 +282,83 @@ ul {
 .two_wide {
     grid-column: 3 / 5;
     grid-row: 1;
-    
+}
+
+#axis_bold_as_love .best {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: relative;
 }
 
 
+#axis_bold_as_love .song_list_02 {
+    background-color: #919191;
+    color: #010101;
+}
+
+.icon {
+    background-image: url(images/number-1-icon.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: -75px;
+    bottom: 230px;
+}
+
+
+.ane_02 li {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 0px;
+    margin-top: 10px;
+    background-color: #010101;
+    font-weight: bold;
+    height: 25vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ane_02 li:nth-of-type(1) {
+    grid-column: 1 / 3;
+    color: #919191;
+    border-radius: 25px 25px 25px 0;
+}
+
+.ane_02 li:nth-of-type(5) {
+    grid-column: 4 / 6;
+    border-radius: 0 25px 25px 25px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.ane_02 li:nth-of-type(2) {
+    color: #919191;
+    border-radius: 0 25px 25px 25px;
+}
+
+.black {
+    border-radius: 25px 25px 0px 25px;
+    color:#919191;
+}
+
+.image_2 {
+    background-image: url(images/jpg\(1\));
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+
+@media (min-width: 1111px) {
+    body {
+        font-size: 20px;
+    }
+}
